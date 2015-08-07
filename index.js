@@ -34,10 +34,10 @@ app.post('/', function(req, res) {
   makeRepo(name, function() {
     var graphLoop = function() {
       if(commits.length === 0) {
-        return res.send('ok');
+        return res.json({success: true});
       }
       var cur = commits.shift().split(':');
-      var amount = cur[0];
+      var amount = Math.pow(cur[0], 2);
       var date = cur[1];
       var dayLoop = function() {
         if(amount <= 0) {
@@ -48,9 +48,9 @@ app.post('/', function(req, res) {
           return addCommit(name, date, dayLoop);
         });
       };
-      dayLoop();
+      return dayLoop();
     };
-    graphLoop();
+    return graphLoop();
   });
 
 });

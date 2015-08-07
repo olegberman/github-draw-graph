@@ -86,9 +86,9 @@ var app = {
     }, '');
     $.post('/', {'name': name, 'commits': commits}, function(data) {
       if(data === 'ok') {
-        //document.write('Awesome, now add the remote and push the ' + name + ' folder to Github');
+
       } else {
-        //document.write('Something is wrong! 😨');
+
       }
     });
   }
