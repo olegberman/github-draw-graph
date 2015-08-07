@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <title>Github draw graph</title>
   </head>
   <body>
     <div id="wrapper">
+      <h1>Draw on your Github graph</h1>
       <input type="text" placeholder="Name for your repository" id="repo-name" />
-      <p>Now it's time for some art ;-)</p>
+      <p>Now it's time for some art 🎨</p>
       <div id="repo-graph"></div>
-      <div id="done-button">DONE</div>
+      <div id="done-button" onclick="app.save();">DONE</div>
     </div>
   </body>
 </html>
