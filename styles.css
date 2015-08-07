@@ -62,3 +62,13 @@ body {
 #done-button:hover {
   transform: scale(1.1);
 }
+
+#instructions {
+  margin: 20px;
+  display: none;
+}
+
+#instructions ul {
+  background-color: #f7f7f7;
+  border-radius: 7px;
+}

@@ -11,7 +11,15 @@
     <div id="wrapper">
       <h1>Draw on your Github graph</h1>
       <input type="text" placeholder="Name for your repository" id="repo-name" />
-      <p>Now it's time for some art 🎨</p>
+      <p id="welcome">Now it's time for some art 🎨</p>
+      <div id="instructions">Awesome! You're almost there! 😼 Now do this: <br />
+        <ul>
+          <li><code>1. cd ./your_repo_name</code></li>
+          <li><code>2. sudo remote add ... (add your remote)</code></li>
+          <li><code>3. sudo git push origin master</code></li>
+        </ul>
+        Do everything with sudo. Follow me on Twitter: <a href="http://twitter.com/olegberman">@olegberman</a>
+      </div>
       <div id="repo-graph"></div>
       <div id="done-button" onclick="app.save();">DONE</div>
     </div>

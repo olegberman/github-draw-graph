@@ -1,4 +1,3 @@
-/*global document:true, console:true*/
 'use strict';
 
 var app = {
@@ -85,10 +84,9 @@ var app = {
       }
     }, '');
     $.post('/', {'name': name, 'commits': commits}, function(data) {
-      if(data === 'ok') {
-
-      } else {
-
+      if(data.success) {
+        document.getElementById('welcome').style.display = 'none';
+        document.getElementById('instructions').style.display = 'block';
       }
     });
   }
